@@ -13,7 +13,7 @@ contract DeployMoodNftTest is Test {
     }
 
     function testConvertSvgToUri() public {
-        string memory expectedUri = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj4KPHRleHQgeD0iMCIgeT0iMTUiIGZpbGw9ImJsYWNrIj5oaSF5b3UgZGVjb2RlZCB0aGlzISA8L3RleHQ+Cjwvc3ZnPg==";
+        string memory expectedUri = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48dGV4dCB4PSIwIiB5PSIxNSIgZmlsbD0iYmxhY2siPmhpIXlvdSBkZWNvZGVkIHRoaXMhIDwvdGV4dD48L3N2Zz4=";
         string memory svg = '<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500"><text x="0" y="15" fill="black">hi!you decoded this! </text></svg>';
         string memory actualUri = deployer.svgToImageURI(svg);
         assert(
